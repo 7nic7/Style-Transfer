@@ -1,3 +1,4 @@
+# CopyRight:https://github.com/machrisaa/tensorflow-vgg
 import inspect
 import os
 
@@ -29,7 +30,7 @@ class Vgg16:
 
         start_time = time.time()
         print("build model started")
-        rgb_scaled = rgb * 255.0
+        rgb_scaled = rgb * 255.0            # rgb是已经标准化为[0,1]的矩阵
 
         # Convert RGB to BGR
         red, green, blue = tf.split(axis=3, num_or_size_splits=3, value=rgb_scaled)
